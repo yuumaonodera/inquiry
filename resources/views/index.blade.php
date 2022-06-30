@@ -19,7 +19,6 @@
       height:30px;
     }
   </style>
- <form>
   <div class="Form">
    <div class="Form-Item">
     <p class="Form-Item-Label">
@@ -68,8 +67,7 @@
    </div>
    <input type="submit" class="Form-Btn" value="送信する">
   </div>
- </form>
- <script src="main.js"></script>
+ <script src="{{ asset('js/main.js') }}"></script>
 </body>
 
 </html>
