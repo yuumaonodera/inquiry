@@ -18,4 +18,14 @@ class InquiryController extends Controller
         Inquiry::create($form);
         return redirect('/');
     }
+    public function confirm(Request $request)
+    {
+        $inputs = $request->all();
+        return view('keep' , [
+            'inputs' => $inputs,
+        ]);
+    }
+    public function send(Request $request)
+    {
+    }
 }

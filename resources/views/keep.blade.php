@@ -9,6 +9,9 @@
 
 <body>
   <h1>taitoru</h1>
+  @section('content')
+  {{ $inputs }}
+  @endsection
 </body>
 
 </html>
