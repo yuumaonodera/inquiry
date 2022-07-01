@@ -2,20 +2,20 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Todo;
+use App\Models\Inquiry;
 use Illuminate\Http\Request;
 
-class TodoController extends Controller
+class InquiryController extends Controller
 {
     public function index()
     {
-        $item = Todo::all();
+        $item = Inquiry::all();
         return view('index')->with('item',$item);
     }
     public function create(Request $request)
     {
         $form = $request->all();
-        Todo::create($form);
+        Inquiry::create($form);
         return redirect('/');
     }
 }

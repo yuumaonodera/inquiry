@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\TodoController;
+use App\Http\Controllers\InquiryController;
 use App\Http\Controllers\KeepController;
 
 /*
@@ -15,15 +15,10 @@ use App\Http\Controllers\KeepController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
-Route::get('/keep' ,function () {
-    return view('keep');
-});
 
-Route::get('/', [TodoController::class, 'index']);
-Route::post('/', [TodoController::class, 'create']);
+
+Route::get('/', [InquiryController::class, 'index']);
+Route::post('/', [InquiryController::class, 'create']);
 
 Route::get('/keep', [KeepController::class, 'index']);
