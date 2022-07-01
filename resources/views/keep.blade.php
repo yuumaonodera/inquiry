@@ -8,11 +8,7 @@
 </head>
 
 <body>
-  <div class="card">
-    @foreach ($item as $todo)
-    <option value="{{ $todo->id }}">{{ $todo->content}}</opition>
-    @endforeach
-  </div>
+  <h1>taitoru</h1>
 </body>
 
 </html>

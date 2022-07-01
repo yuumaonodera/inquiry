@@ -11,6 +11,6 @@ class KeepController extends Controller
     public function index()
     {
         $item = Todo::all();
-        return view('index', compact($item));
+        return view('index', ['item' => $item]);
     }
 }

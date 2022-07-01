@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TodoController;
+use App\Http\Controllers\KeepController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,3 +25,5 @@ Route::get('/keep' ,function () {
 
 Route::get('/', [TodoController::class, 'index']);
 Route::post('/', [TodoController::class, 'create']);
+
+Route::get('/keep', [KeepController::class, 'index']);
