@@ -18,5 +18,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/keep' ,function () {
+    return view('keep');
+});
+
 Route::get('/', [TodoController::class, 'index']);
 Route::post('/', [TodoController::class, 'create']);
