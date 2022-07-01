@@ -8,9 +8,9 @@ use App\Models\Todo;
 
 class KeepController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
         $item = Todo::all();
-        return view('index', ['item' => $item]);
+        return view('keep', [$request->id]);
     }
 }
