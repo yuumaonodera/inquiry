@@ -22,3 +22,5 @@ Route::get('/', [InquiryController::class, 'index']);
 Route::post('/', [InquiryController::class, 'create']);
 
 Route::get('/keep', [InquiryController::class, 'index']);
+
+Route::post('/keep', [InquiryController::class, 'confirm']);
