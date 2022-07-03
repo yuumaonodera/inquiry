@@ -16,7 +16,7 @@ class InquiryController extends Controller
     {
         $form = $request->all();
         Inquiry::create($form);
-        return redirect('/');
+        return redirect('/keep');
     }
     public function confirm(Request $request)
     {
