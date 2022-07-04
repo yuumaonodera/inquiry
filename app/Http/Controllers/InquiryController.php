@@ -24,12 +24,12 @@ class InquiryController extends Controller
         return view('keep' , [
             'inputs' => $inputs,
         ]);
+        dd($inputs);
     }
     public function send(Request $request)
     {
         $kings = $request->all();
-        return view('/keep', [
-            'kings' => $kings,
-        ]);
+        return view('/keep');
+        dd($kings);
     }
 }

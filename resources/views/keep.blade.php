@@ -8,9 +8,7 @@
 </head>
 
 <body>
-  @foreach($inputs as $inquiry)
-  <option value="{{ $inquiry->id }}">{{ $inquiry->content }}</option>
-  @endforeach
+  
 </body>
 
 </html>

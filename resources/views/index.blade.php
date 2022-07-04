@@ -28,38 +28,39 @@
       padding:10px 10px 10px 10px;
     }
   </style>
-  <form id="form">
-    @csrf
-   <div class="Form">
-    @if (count($errors) > 0)
-    <ul>
-      @foreach($errors->all() as $error)
-      <li>{{$error}}</li>
-      @endforeach
-    </ul>
-    @endif
-    <div class="Form-Item">
-     <p class="Form-Item-Label">
-      氏名
-     </p>
-     <input type="text" class="Form-Item-Input" required/>
-    </div>
-    <div class="Form-Item">
-     <p class="Form-Item-Label">年齢</p>
-     <input type="text" class="Form-Item-Input" required/>
-     @error('content') <span class="error">{{ $message }}</span> @enderror
-    </div>
-    <div>
-     <p class="Form-Item">性別</p>
-     <input type="radio" name="sex" value="男性" checked> 男性
-     <input type="radio" name="sex" value="女性"> 女性
-    </div>
-    <div class="Form-Item">
-      <script src="https://yubinbango.github.io/yubinbango/yubinbango.js" charset="UTF-8"></script>
-     <div class="h-adr">
-       <span class="p-country-name" style="display:none;">Japan</span>
-        〒<input type="text" class="p-postal-code" size="8" maxlength="8" required/><br>
-            <select class="p-region-id">
+  <form method="POST" action="/keep">
+    <form id="form">
+       @csrf
+     <div class="Form">
+       @if (count($errors) > 0)
+       <ul>
+         @foreach($errors->all() as $error)
+         <li>{{$error}}</li>
+         @endforeach
+       </ul>
+       @endif
+       <div class="Form-Item">
+        <p class="Form-Item-Label">
+         氏名
+        </p>
+        <input type="text" class="Form-Item-Input" required/>
+      </div>
+      <div class="Form-Item">
+        <p class="Form-Item-Label">年齢</p>
+        <input type="text" class="Form-Item-Input" required/>
+        @error('content') <span class="error">{{ $message }}</span> @enderror
+      </div>
+      <div>
+        <p class="Form-Item">性別</p>
+        <input type="radio" name="sex" value="男性" checked> 男性
+        <input type="radio" name="sex" value="女性"> 女性
+      </div>
+      <div class="Form-Item">
+         <script src="https://yubinbango.github.io/yubinbango/yubinbango.js" charset="UTF-8"></script>
+        <div class="h-adr">
+          <span class="p-country-name" style="display:none;">Japan</span>
+           〒<input type="text" class="p-postal-code" size="8" maxlength="8" required/><br>
+          <select class="p-region-id">
               <option value="">--</option>
               <option value="1">北海道</option>
               <option value="2">青森県</option>
@@ -107,19 +108,17 @@
               <option value="45">宮崎県</option>
               <option value="46">鹿児島県</option>
               <option value="47">沖縄県</option>
-           </select><br>
+          </select><br>
            <input type="text" class="p-locality p-street-address p-extended-address"/><br>
+        </div>
+      </div>
+       <div class="Form-Item">
+         <p class="Form-Item-Label isMsg">お問い合わせ内容</p>
+         <textarea class="Form-Item-Textarea"></textarea>
+       </div>
+         <button class="Form-button">送信</button>
      </div>
-    </div>
-    <div class="Form-Item">
-      <p class="Form-Item-Label isMsg">お問い合わせ内容</p>
-      <textarea class="Form-Item-Textarea"></textarea>
-    </div>
-    <form method="POST" action="/keep">
-      @csrf
-      <button class="Form-button">送信</button>
     </form>
-   </div>
   </form>
 
  <script src="{{ asset('/js/main.js') }}"></script>
