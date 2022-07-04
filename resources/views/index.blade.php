@@ -29,8 +29,6 @@
     }
   </style>
   <form method="POST" action="/keep">
-    <form id="form">
-       @csrf
      <div class="Form">
        @if (count($errors) > 0)
        <ul>
@@ -118,7 +116,6 @@
        </div>
          <button class="Form-button">送信</button>
      </div>
-    </form>
   </form>
 
  <script src="{{ asset('/js/main.js') }}"></script>
