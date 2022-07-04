@@ -29,7 +29,8 @@
     }
   </style>
   <form method="POST" action="/keep">
-     <div class="Form">
+    @csrf
+    <div class="Form">
        @if (count($errors) > 0)
        <ul>
          @foreach($errors->all() as $error)
@@ -45,7 +46,7 @@
       </div>
       <div class="Form-Item">
         <p class="Form-Item-Label">年齢</p>
-        <input type="text" class="Form-Item-Input" required/>
+        <input type="text" class="Form-Item-Input"  required/>
         @error('content') <span class="error">{{ $message }}</span> @enderror
       </div>
       <div>
@@ -115,7 +116,7 @@
          <textarea class="Form-Item-Textarea"></textarea>
        </div>
          <button class="Form-button">送信</button>
-     </div>
+    </div>
   </form>
 
  <script src="{{ asset('/js/main.js') }}"></script>

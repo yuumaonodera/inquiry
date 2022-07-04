@@ -21,13 +21,14 @@ class InquiryController extends Controller
     public function confirm(Request $request)
     {
         $inputs = $request->all();
-        return view('keep' , [
+        return view('/keep' , [
             'inputs' => $inputs,
         ]);
     }
     public function send(Request $request)
     {
         $kings = $request->all();
+        return view('/keep', ['kings' => $kings]);
         dd($kings);
     }
 }
