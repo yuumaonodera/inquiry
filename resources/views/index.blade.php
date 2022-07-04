@@ -115,7 +115,7 @@
       <p class="Form-Item-Label isMsg">お問い合わせ内容</p>
       <textarea class="Form-Item-Textarea"></textarea>
     </div>
-    <form method="GET" value="keep">
+    <form method="POST" action="/keep">
       @csrf
       <button class="Form-button">送信</button>
     </form>

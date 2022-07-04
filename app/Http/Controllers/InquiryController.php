@@ -16,7 +16,7 @@ class InquiryController extends Controller
     {
         $form = $request->all();
         Inquiry::create($form);
-        return redirect('/keep');
+        return redirect('/');
     }
     public function confirm(Request $request)
     {
@@ -27,5 +27,9 @@ class InquiryController extends Controller
     }
     public function send(Request $request)
     {
+        $kings = $request->all();
+        return view('/keep', [
+            'kings' => $kings,
+        ]);
     }
 }

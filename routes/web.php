@@ -21,5 +21,5 @@ use App\Http\Controllers\KeepController;
 Route::get('/', [InquiryController::class, 'index']);
 Route::post('/', [InquiryController::class, 'create']);
 
-Route::get('/keep', [InquiryController::class, 'send']);
-Route::post('/keep', [InquiryController::class, 'confirm']);
+Route::post('/keep', [InquiryController::class, 'send']);
+Route::get('/keep', [InquiryController::class, 'confirm']);
