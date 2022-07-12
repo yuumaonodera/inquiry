@@ -4,13 +4,14 @@ namespace App\Http\Controllers;
 
 use App\Models\Inquiry;
 use Illuminate\Http\Request;
+use Illuminate\Http\Support\Facades\DB;
 
 class InquiryController extends Controller
 {
     public function index()
     {
         $item = Inquiry::all();
-        return view('index')->with('item',$item);
+        return view('index', ['item' => $item]);
     }
     public function create(Request $request)
     {
@@ -29,6 +30,5 @@ class InquiryController extends Controller
     {
         $kings = $request->all();
         return view('/keep', ['kings' => $kings]);
-        dd($kings);
     }
 }

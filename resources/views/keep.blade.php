@@ -8,6 +8,9 @@
 </head>
 
 <body>
+  @foreach($kings as $inquiry)
+  <input type="text" value="{{$inquiry}}">
+  @endforeach
 </body>
 
 </html>

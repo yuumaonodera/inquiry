@@ -15,7 +15,8 @@ class CreateInquiriesTable extends Migration
     {
         Schema::create('inquiries', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+                  $table->string('content', 191);
+                  $table->timestamps('created_at');
         });
     }
 
